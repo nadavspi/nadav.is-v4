@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+import Item from "./item.astro";
+import Layout from "@layouts/base.astro";
+const items = await getCollection("watching");
+---
+
+<Layout pageTitle="Watching 👀">
+  <h1>Chinese Media Log</h1>
+  <ol>
+    {items.map((item) => <Item item={item} />)}
+  </ol>
+</Layout>

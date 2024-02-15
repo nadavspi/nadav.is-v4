@@ -1,0 +1,21 @@
+---
+import Layout from "@layouts/base.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const items = await getCollection("writing");
+  return items.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await item.render();
+---
+
+<Layout>
+  <div class="prose md:prose-lg dark:prose-invert prose-h1:font-bold prose-h1:my-10">
+    <Content />
+  </div>
+</Layout>

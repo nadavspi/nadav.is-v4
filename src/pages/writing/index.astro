@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/base.astro";
+const items = await getCollection("writing");
+console.log(items);
+---
+
+<Layout pageTitle="Writing">
+  <h1>Here we go</h1>
+  <ol>
+    {
+      items.map(({ data, slug }) => {
+        const { dateAdded, title } = data;
+        return (
+          <li>
+            <a href={`/writing/${slug}`} class="block text-lg">
+              {title}
+            </a>
+            <time class="block">{dateAdded.toDateString()} (X days ago)</time>
+          </li>
+        );
+      })
+    }
+  </ol>
+</Layout>

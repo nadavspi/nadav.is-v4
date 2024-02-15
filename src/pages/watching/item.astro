@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  item: CollectionEntry<"watching">;
+}
+const { item } = Astro.props;
+const { category, title, titleTranslated, yearPublished } = item.data;
+const { Content } = await item.render();
+---
+
+<li class:list={["mb-5"]}>
+  <h2>
+    {title}
+    {titleTranslated}
+  </h2>
+  {yearPublished}, {category}
+  <Content />
+</li>
