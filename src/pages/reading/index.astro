@@ -11,7 +11,7 @@ const items = await getCollection("reading");
     <li>
       <a href=`/reading/${item.slug}`>
         {item.data.title}
-        <div class="block text-sm text-dark-purple dark:text-purple-light">{item.data.author}</div>
+        <div class="block not-italic text-sm text-purple-dark dark:text-purple-light">{item.data.author}</div>
       </a>
     </li>
     ))}

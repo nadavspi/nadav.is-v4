@@ -1,0 +1,19 @@
+---
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+---
+
+<header class="relative mb-10 border-b-4 border-tumbleweed-600 dark:border-purple pb-4 font-serif">
+  <a href="/" class="flex-100 text-2xl text-purple-dark dark:text-purple-light italic mb-1">
+    Nadav Spiegelman
+  </a>
+
+  <ThemeSwitcher class="absolute top-0 right-0" />
+
+  <nav>
+    <a class="mr-3" href="/">Home</a>
+    <a class="mr-3" href="/writing/">Writing</a>
+    <a class="mr-3" href="/photography/">Photography</a>
+    <a class="mr-3" href="/reading/">Reading</a>
+    <a class="mr-3" href="/watching/">Watching</a>
+  </nav>
+</header>

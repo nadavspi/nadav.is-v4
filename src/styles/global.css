@@ -3,11 +3,12 @@
 @layer base {
   h1 {
     @apply text-xl md:text-2xl font-bold;
+    @apply text-purple-dark dark:text-purple-light;
     @apply mb-8;
   }
 
   h2 {
-    @apply text-xl text-purple-pale;
+    @apply text-xl text-greenlake-800 dark:text-purple-pale;
     @apply mb-2;
     /* font-variant-caps: small-caps; */
   }
@@ -18,8 +19,8 @@
 
   a {
     @apply italic;
-    @apply text-tumbleweed;
-    @apply hover:text-cyan;
+    @apply text-greenlake dark:text-tumbleweed;
+    @apply hover:text-tumbleweed-600 dark:hover:text-cyan;
   }
 }
 

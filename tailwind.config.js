@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			typography: {
@@ -52,6 +53,20 @@ export default {
 				'800': '#255765',
 				'900': '#234956',
 				'950': '#12303a',
+			},
+			'greenlake': {
+				'50': 'hsl(171, 41%, 97%)',
+				'100': 'hsl(167, 49%, 89%)',
+				'200': 'hsl(168, 48%, 78%)',
+				'300': 'hsl(170, 44%, 64%)',
+				'400': 'hsl(172, 38%, 50%)',
+				'500': 'hsl(173, 46%, 39%)',
+				DEFAULT: 'hsl(173, 46%, 39%)', 
+				'600': 'hsl(174, 48%, 32%)',
+				'700': 'hsl(174, 44%, 26%)',
+				'800': 'hsl(175, 41%, 22%)',
+				'900': 'hsl(176, 34%, 19%)',
+				'950': 'hsl(178, 49%, 10%)',
 			},
 		}
 	},
