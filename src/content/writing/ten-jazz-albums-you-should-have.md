@@ -1,7 +1,7 @@
 ---
 title: Ten Jazz albums you should have
 date: 2013-12-25
-tags: [Music]
+tags: [music]
 ---
 
 As always, this list is not comprehensive—I could probably make fifty of these without repeating myself and have them all be great.

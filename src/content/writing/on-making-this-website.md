@@ -1,7 +1,7 @@
 ---
 title: On making this website
 date: 2013-12-24
-tags: [Development, Archived]
+tags: [computers, archived]
 ---
 
 <aside class="notice">This post is outdated: it refers to the previous version of this website.</aside>

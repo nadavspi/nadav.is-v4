@@ -1,7 +1,7 @@
 ---
 title: Friday the 13th
 date: 2013-12-13
-tags: [Music]
+tags: [music]
 ---
 
 It's Friday the 13th, "an unlucky day in Western and Eastern superstition" according to [Wikipedia][3674-001]. 

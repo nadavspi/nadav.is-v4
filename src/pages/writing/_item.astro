@@ -4,10 +4,8 @@ const { data, slug } = Astro.props;
 const { date, tags = [], title } = data;
 const isArchived = (() => {
   if (!tags) return false;
-  return tags.includes("Archived");
+  return tags.includes("archived");
 })();
-
-const displayTags = tags?.filter((tag) => !["Archived"].includes(tag));
 ---
 
 <li
