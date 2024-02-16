@@ -21,6 +21,8 @@ export default {
 			"purple": {
 				dark: "#1b191f",
 				DEFAULT: "#5d178f",
+				pale: "#ead3ff",
+				dusk: "#b9b5d0",
 				light: "#d2d0e2",
 			},
 			'tumbleweed': {

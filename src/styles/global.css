@@ -2,12 +2,14 @@
 
 @layer base {
   h1 {
-    @apply text-2xl;
-    @apply mb-3;
+    @apply text-xl font-bold;
+    @apply mb-8;
   }
 
   h2 {
-    @apply text-xl;
+    @apply text-xl text-purple-pale;
+    @apply mb-2;
+    /* font-variant-caps: small-caps; */
   }
 
   h3 {

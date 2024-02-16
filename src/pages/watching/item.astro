@@ -8,11 +8,14 @@ const { category, title, titleTranslated, yearPublished } = item.data;
 const { Content } = await item.render();
 ---
 
-<li class:list={["mb-5"]}>
-  <h2>
-    {title}
+<li class="mb-8 md:mb-10 pb-8 md:pb-10 border-b-2 border-tumbleweed">
+  <h2 class="">
+    <span class="block">{title}</span>
     {titleTranslated}
   </h2>
   {yearPublished}, {category}
-  <Content />
+
+  <div class="mt-5">
+    <Content />
+  </div>
 </li>
