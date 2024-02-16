@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": "/home/nadavspi/src/nadav.is",
+    "baseUrl": ".",
     "paths": {
       "@components/*": [
         "./src/components/*"
