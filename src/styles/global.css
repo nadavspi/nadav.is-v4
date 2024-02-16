@@ -2,7 +2,7 @@
 
 @layer base {
   h1 {
-    @apply text-xl font-bold;
+    @apply text-xl md:text-2xl font-bold;
     @apply mb-8;
   }
 

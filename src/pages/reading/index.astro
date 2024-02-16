@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/base.astro";
+const items = await getCollection("reading");
+---
+
+<Layout pageTitle="Watching 👀">
+  <h1>Reading Log</h1>
+  <ol>
+    {items.map((item) => (
+    <li>
+      <a href=`/reading/${item.slug}`>
+        {item.data.title}
+        <div class="block text-sm text-dark-purple dark:text-purple-light">{item.data.author}</div>
+      </a>
+    </li>
+    ))}
+  </ol>
+</Layout>

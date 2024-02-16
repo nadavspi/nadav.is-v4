@@ -4,7 +4,7 @@ import Prose from "@components/Prose.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const items = await getCollection("writing");
+  const items = await getCollection("reading");
   return items.map((item) => ({
     params: { slug: item.slug },
     props: { item },
@@ -17,6 +17,7 @@ const { Content } = await item.render();
 
 <Layout pageTitle={item.data.title}>
   <Prose>
+    <h1>{item.data.title}</h1>
     <Content />
   </Prose>
 </Layout>

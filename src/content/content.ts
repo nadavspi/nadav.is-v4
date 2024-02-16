@@ -11,6 +11,7 @@ const photoCollection = defineCollection({
 const reading = defineCollection({
   type: 'content', 
   schema: z.object({
+    author: z.string(),
     category: z.enum(["articles", "books"]),
     datePublished: z.date().optional(),
     dateUpdated: z.date().optional(),
