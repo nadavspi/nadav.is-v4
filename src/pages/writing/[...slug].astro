@@ -14,8 +14,8 @@ const { item } = Astro.props;
 const { Content } = await item.render();
 ---
 
-<Layout>
-  <div class="prose md:prose-lg dark:prose-invert prose-h1:font-bold prose-h1:my-10">
+<Layout pageTitle={item.data.title}>
+  <div class="prose dark:prose-invert prose-a:text-tumbleweed prose-a:no-underline prose-a:font-normal prose-h1:font-bold prose-h1:my-10">
     <Content />
   </div>
 </Layout>

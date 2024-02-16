@@ -2,8 +2,8 @@
 
 @layer base {
   h1 {
-    @apply text-4xl;
-    @apply md:text-5xl;
+    @apply text-2xl;
+    @apply mb-3;
   }
 
   h2 {
@@ -15,7 +15,8 @@
   }
 
   a {
-    @apply text-tumbleweed italic;
+    @apply italic;
+    @apply text-tumbleweed;
     @apply hover:text-cyan;
   }
 }

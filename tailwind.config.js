@@ -2,8 +2,17 @@ const colors = require('tailwindcss/colors')
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						lineHeight: '1.5'
+					}
+				}
+			}
+		},
 		fontFamily: {
-			body: ['FF Tundra', 'Georgia' ,' serif'],
+			serif: ['FF Tundra', 'Georgia' ,' serif'],
 		},
 		colors: {
 			gray: colors.gray,

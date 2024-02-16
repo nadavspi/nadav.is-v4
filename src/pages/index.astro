@@ -9,6 +9,20 @@ import WelcomeStatic from "./welcome-static.gif";
 <Layout pageTitle="Nadav Spiegelman">
   <!-- <Image src={Welcome} alt="Welcome to my Homepage!" /> -->
   <Image src={WelcomeStatic} alt="Welcome to my Homepage!" />
-  <div class="md:text-2xl my-3">(Because I’ve been making websites since 1999.)</div>
-  <p>Anyway. This is my personal website, an online journal — a web log, if you will — for sharing some of the things I’m thinking about or working on.</p>
+  <button data-toggle-animation class="">Disable animation</button>
+  <div class="font-serif md:text-2xl my-3">
+    (Because I’ve been making websites since 1999.)
+  </div>
+  <p>
+    Anyway. This is my personal website, an online journal — a web log, if you
+    will — for sharing some of the things I’m thinking about or working on.
+  </p>
 </Layout>
+
+<script>
+  const button = document.querySelector("[data-toggle-animation]");
+  console.log(button);
+  button?.addEventListener("click", () => {
+    console.log("click");
+  });
+</script>
