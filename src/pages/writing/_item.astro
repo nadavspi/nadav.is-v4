@@ -1,0 +1,29 @@
+---
+import WrittenLongAgo from "@components/WrittenLongAgo.astro";
+const { data, slug } = Astro.props;
+const { date, tags = [], title } = data;
+const isArchived = (() => {
+  if (!tags) return false;
+  return tags.includes("Archived");
+})();
+
+const displayTags = tags?.filter((tag) => !["Archived"].includes(tag));
+---
+
+<li
+  class="relative text-sm border-4 border-tumbleweed-600 dark:border-purple p-4 m-4 rounded"
+>
+  {
+    isArchived && (
+      <span class="absolute top-2 right-2 italic text-greenlake-800 dark:text-purple-pale">
+        Archived
+      </span>
+    )
+  }
+  <a href={`/writing/${slug}`} class="block text-lg/tight mx-2 my-5">
+    {title}
+    <time class="block text-sm text-purple-dark dark:text-purple-light">
+      <WrittenLongAgo date={date} />
+    </time>
+  </a>
+</li>

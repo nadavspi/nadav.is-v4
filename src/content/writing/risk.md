@@ -1,7 +1,6 @@
 ---
 title: Risk
 date: 2014-10-04
-tags:
 ---
 
 <p>In High School, I fell in love with Jazz and found my voice in a big awkward instrument that I affectionately refer to as the six foot violin. Fortunate to have good teachers and an obsessive temperament, I picked it up pretty quickly and was playing around Atlanta professionally by my last year of High School.</p>

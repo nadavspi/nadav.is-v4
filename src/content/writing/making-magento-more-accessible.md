@@ -1,7 +1,7 @@
 ---
 title: Making Magento slightly more accessible
 date: 2015-02-25
-tags: [Web]
+tags: [Web, Archived]
 ---
 
 Magento [has accessibility problems](https://twitter.com/nadavspi/status/519853270911950848). I've worked on several Magento projects by now and I've tried to do little things here and there to make it more sane, like using more semantic elements (`<div class="fieldset">` — are you kidding me?) and reducing over markup. There are so many things you can fix in Magento, but I'd like to focus on one cute little JavaScript function as an example.

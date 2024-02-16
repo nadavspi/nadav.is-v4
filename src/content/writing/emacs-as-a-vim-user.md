@@ -1,10 +1,8 @@
 ---
 title: Emacs as a Vim user
 date: 2014-08-31
-tags: [Development]
+tags: [Development, Archived]
 ---
-
-<aside class="notice">Warning: this post is geeky. Like, really geeky. If you only recognize three words from the title, you should probably skip this one.</aside>
 
 Four months ago [I decided to learn Vim](http://nadav.is/writing/a-month-with-vim/) and began using it as my full time text editor at work and at home. I've gotten pretty damn comfortable with it. I don't know if using Vim has made me faster or more efficient, but there's definitely a [flow](http://en.wikipedia.org/wiki/Flow_(psychology)) that comes from using the keyboard for everything.
 

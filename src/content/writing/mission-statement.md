@@ -1,7 +1,6 @@
 ---
 title: Mission Statement
 date: 2014-10-04
-tags:
 ---
 
 <p>This website is for me. I spend a lot of time thinking about, creating, and tinkering with stuff for the web, much of it for other people. This is my place to do all of that stuff without any outside constraints, even (or perhaps especially) when it seems self-indulgent or geeky or pointless.</p>

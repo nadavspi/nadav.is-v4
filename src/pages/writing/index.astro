@@ -1,25 +1,16 @@
 ---
-import WrittenLongAgo from "@components/WrittenLongAgo.astro";
-import { getCollection } from "astro:content";
-import Layout from "@layouts/base.astro";
 const items = await getCollection("writing");
+import Item from "./_item.astro";
+import Layout from "@layouts/base.astro";
+import { getCollection } from "astro:content";
 ---
 
 <Layout pageTitle="Writing">
   <ol class="grid md:grid-cols-2 lg:grid-cols-3">
     {
       items.map(({ data, slug }) => {
-        const { date, title } = data;
         return (
-          <li class="text-sm border-4 border-tumbleweed-600 dark:border-purple p-4 m-4 rounded">
-            <a href={`/writing/${slug}`} class="block text-lg">
-              {title}
-            </a>
-            <time>
-              <WrittenLongAgo date={date} />
-            </time>
-            <div>{data.tags}</div>
-          </li>
+          <Item data={data} slug={slug} />
         );
       })
     }
