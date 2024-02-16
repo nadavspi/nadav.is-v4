@@ -3,11 +3,14 @@ import { formatDistanceToNow } from "date-fns";
 
 interface Props {
   date: Date;
+  class?: String;
 }
 
-const { date } = Astro.props;
+const { class: className, date } = Astro.props;
 const longAgo = formatDistanceToNow(date, { addSuffix: true });
-const capitalized = [...longAgo][0] + longAgo.slice(1);
+const capitalized = [...longAgo][0].toUpperCase() + longAgo.slice(1);
 ---
 
-Written {capitalized}
+<span class:list={[className]}>
+  {capitalized}
+</span>

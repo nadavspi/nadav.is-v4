@@ -1,7 +1,7 @@
 ---
 title: Emacs as a Vim user
 date: 2014-08-31
-tags: Development
+tags: [Development]
 ---
 
 <aside class="notice">Warning: this post is geeky. Like, really geeky. If you only recognize three words from the title, you should probably skip this one.</aside>

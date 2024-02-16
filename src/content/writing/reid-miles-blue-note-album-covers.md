@@ -1,7 +1,7 @@
 ---
-title: Reid Miles&rsquo;s Blue Note album covers
+title: Reid Miles's Blue Note album covers
 date: 2014-03-26
-tags: Music, Design
+tags: [Music, Design]
 ---
 
 Album covers are a perfect example of design within constraints: some names, a fixed canvas, a few typefaces to choose from, sometimes a photograph. [Blue Note Records](http://www.bluenote.com/) has been around since 1939, and their classic covers are absolute masterpieces.

@@ -1,7 +1,7 @@
 ---
 title: Shooting film for a year
 date: 2018-12-01
-tags: Photography
+tags: [Photography]
 ---
 Photography has become my creative practice and obsession over the last year
 and a half. It’s been a year since I started shooting
