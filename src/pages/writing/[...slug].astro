@@ -1,4 +1,5 @@
 ---
+import WrittenLongAgo from "@components/WrittenLongAgo.astro";
 import Layout from "@layouts/base.astro";
 import Prose from "@components/Prose.astro";
 import { getCollection } from "astro:content";
@@ -13,9 +14,15 @@ export async function getStaticPaths() {
 
 const { item } = Astro.props;
 const { Content } = await item.render();
+const { date, title } = item.data;
 ---
 
-<Layout pageTitle={item.data.title}>
+<Layout pageTitle={title}>
+  <header class="mb-8">
+    <h1 class="mb-0">{title}</h1>
+    <WrittenLongAgo date={date} />
+  </header>
+
   <Prose>
     <Content />
   </Prose>

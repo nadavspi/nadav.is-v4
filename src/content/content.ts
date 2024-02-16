@@ -38,7 +38,7 @@ const writing = defineCollection({
   type: 'content', 
   schema: z.object({
     blurb: z.string().optional(),
-    dateAdded: z.date(),
+    date: z.date(),
     dateUpdated: z.date().optional(),
     tags: z.array(z.string()).optional(),
     title: z.string(),

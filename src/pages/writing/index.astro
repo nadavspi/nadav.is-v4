@@ -1,21 +1,23 @@
 ---
+import WrittenLongAgo from "@components/WrittenLongAgo.astro";
 import { getCollection } from "astro:content";
 import Layout from "@layouts/base.astro";
 const items = await getCollection("writing");
 ---
 
 <Layout pageTitle="Writing">
-  <h1>Writing Archive</h1>
   <ol>
     {
       items.map(({ data, slug }) => {
-        const { dateAdded, title } = data;
+        const { date, title } = data;
         return (
           <li class="mb-4">
             <a href={`/writing/${slug}`} class="block text-lg">
               {title}
             </a>
-            <time class="block">{dateAdded.toDateString()} (X days ago)</time>
+            <time>
+              <WrittenLongAgo date={date} />
+            </time>
           </li>
         );
       })

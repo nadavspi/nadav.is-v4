@@ -1,10 +1,8 @@
 ---
 title: Risk
-dateAdded: 2014-10-04
+date: 2014-10-04
+tags:
 ---
-
-# {frontmatter.title}
-<time>{frontmatter.dateAdded}</time>
 
 <p>In High School, I fell in love with Jazz and found my voice in a big awkward instrument that I affectionately refer to as the six foot violin. Fortunate to have good teachers and an obsessive temperament, I picked it up pretty quickly and was playing around Atlanta professionally by my last year of High School.</p>
 
@@ -18,5 +16,4 @@ dateAdded: 2014-10-04
 
 <p>Knowing that I&rsquo;d need a good job to survive in New York, I spent the year leading up to the move reconnecting with my computer geek side and deliberately building up my skills. I fell in love with the web. It had changed a lot since I bought my first <abbr>HTML</abbr> book at age ten, and I wanted to be a part of it. I learned about responsive design, fell in love with typography on the web, had some fun with Rails, and became pretty good at <abbr>CSS</abbr> in the process.</p>
 
-<p>In February 2014, I took a job as a Front End Developer for <a href="http://www.somethingdigital.com">Something Digital</a>, an agency in midtown Manhattan. I get to work all kinds of projects with some great people, and I learn a lot.</p>
-
+<p>In February 2014, I took a job as a Front End Developer for <a href="http://www.somethingdigital.com">Something Digital</a>, an agency in midtown Manhattan. I get to work all kinds of projects with some great people, and I learn a lot.
