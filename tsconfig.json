@@ -1,11 +1,18 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "/home/nadavspi/src/nadav.is",
     "paths": {
-      "@layouts/*": ["./src/layouts/*"]
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ]
     },
     "strictNullChecks": true,
-    "allowJs": true
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
