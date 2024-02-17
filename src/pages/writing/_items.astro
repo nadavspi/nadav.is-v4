@@ -1,11 +1,13 @@
 ---
 import Item from "./_item.astro";
 const { items } = Astro.props;
+const unarchived = items.filter((item: CollectionConfig) => !item.data.tags?.includes("archived"))
+const archived = items.filter(item => item.data.tags?.includes("archived"))
 ---
 
 <ol class="grid md:grid-cols-2 lg:grid-cols-3">
   {
-    items.map(({ data, slug }) => {
+    [...unarchived, ...archived].map(({ data, slug }) => {
       return <Item data={data} slug={slug} />;
     })
   }
