@@ -1,0 +1,16 @@
+---
+import allTags from "../pages/writing/allTags";
+import { getCollection } from "astro:content";
+
+const allItems = await getCollection("writing");
+---
+
+{
+  allTags(allItems).map((tag) => {
+    return (
+      <a href={`/writing/about/${tag}/`} class="block">
+        {tag}
+      </a>
+    );
+  })
+}

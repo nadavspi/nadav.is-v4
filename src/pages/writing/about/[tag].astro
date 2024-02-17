@@ -1,18 +1,21 @@
 ---
 import Items from "../_items.astro";
 import Layout from "@layouts/base.astro";
+import TagNav from "@components/TagNav.astro"
 import allTags from "../allTags.ts";
 import { getCollection } from "astro:content";
 
+const allItems = await getCollection("writing");
+
 export async function getStaticPaths() {
-  const items = await getCollection("writing");
+const allItems = await getCollection("writing");
   const itemsByTag = async (tag) => {
     return await getCollection("writing", ({ data }) => {
       return data.tags?.includes(tag);
     });
   };
   const paths = await Promise.all(
-    allTags(items).map(async (tag) => {
+    allTags(allItems).map(async (tag) => {
       return {
         params: { tag },
         props: { items: await itemsByTag(tag) },
@@ -28,5 +31,6 @@ const { tag } = Astro.params;
 
 <Layout pageTitle={`Writing about ${tag}`}>
   <h1>Writing about <span>{tag}</span></h1>
+  <TagNav />
   <Items items={items} />
 </Layout>

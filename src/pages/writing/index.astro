@@ -1,17 +1,13 @@
 ---
 import Items from "./_items.astro";
 import Layout from "@layouts/base.astro";
+import TagNav from "@components/TagNav.astro"
 import { getCollection } from "astro:content";
-import allTags from "./allTags.ts";
 
 const items = await getCollection("writing");
 ---
 
 <Layout pageTitle="Writing">
-  {
-    allTags(items).map((tag) => {
-      return <a href={`/writing/about/${tag}/`} class="block">{tag}</a>;
-    })
-  }
+  <TagNav />
   <Items items={items} />
 </Layout>
