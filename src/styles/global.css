@@ -21,6 +21,7 @@
     @apply italic;
     @apply text-greenlake dark:text-tumbleweed;
     @apply hover:text-tumbleweed-600 dark:hover:text-cyan;
+    @apply transition-all;
   }
 }
 

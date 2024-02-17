@@ -1,0 +1,12 @@
+---
+import Item from "./_item.astro";
+const { items } = Astro.props;
+---
+
+<ol class="grid md:grid-cols-2 lg:grid-cols-3">
+  {
+    items.map(({ data, slug }) => {
+      return <Item data={data} slug={slug} />;
+    })
+  }
+</ol>

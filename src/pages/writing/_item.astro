@@ -8,20 +8,36 @@ const isArchived = (() => {
 })();
 ---
 
-<li
-  class="relative text-sm border-4 border-tumbleweed-600 dark:border-purple p-4 m-4 rounded"
+<a
+  href={`/writing/${slug}`}
+  class:list={[
+    "relative group",
+    "text-sm",
+    "transition-all",
+    "motion-reduce:transition-none",
+    "p-4 m-4",
+    "border-4 border-tumbleweed-600",
+    "dark:border-purple rounded",
+    { "border-tumbleweed-600/50 hover:border-tumbleweed-600/100": isArchived },
+    { "dark:border-purple/70 dark:hover:border-purple/100": isArchived },
+  ]}
 >
   {
     isArchived && (
-      <span class="absolute top-2 right-2 italic text-greenlake-800 dark:text-purple-pale">
+      <span
+        class:list={[
+          "transition-all absolute top-2 right-2 rotate-12 group-hover:rotate-0 italic text-greenlake-800 dark:text-purple-pale",
+          "motion-reduce:transform-none",
+        ]}
+      >
         Archived
       </span>
     )
   }
-  <a href={`/writing/${slug}`} class="block text-lg/tight mx-2 my-5">
+  <div class="block text-lg/tight my-5">
     {title}
-    <time class="block text-sm text-purple-dark dark:text-purple-light">
-      <WrittenLongAgo date={date} />
-    </time>
-  </a>
-</li>
+  </div>
+  <time class="block text-sm text-purple-dark dark:text-purple-light">
+    <WrittenLongAgo date={date} />
+  </time>
+</a>

@@ -1,18 +1,17 @@
 ---
-const items = await getCollection("writing");
-import Item from "./_item.astro";
+import Items from "./_items.astro";
 import Layout from "@layouts/base.astro";
 import { getCollection } from "astro:content";
+import allTags from "./allTags.ts";
+
+const items = await getCollection("writing");
 ---
 
 <Layout pageTitle="Writing">
-  <ol class="grid md:grid-cols-2 lg:grid-cols-3">
-    {
-      items.map(({ data, slug }) => {
-        return (
-          <Item data={data} slug={slug} />
-        );
-      })
-    }
-  </ol>
+  {
+    allTags(items).map((tag) => {
+      return <a href={`/writing/about/${tag}/`} class="block">{tag}</a>;
+    })
+  }
+  <Items items={items} />
 </Layout>
