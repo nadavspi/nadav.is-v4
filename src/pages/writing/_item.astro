@@ -1,10 +1,21 @@
 ---
 import WrittenLongAgo from "@components/WrittenLongAgo.astro";
-const { data, slug } = Astro.props;
+const { collection, data, slug } = Astro.props;
 const { date, tags = [], title } = data;
 const isArchived = (() => {
   if (!tags) return false;
   return tags.includes("archived");
+})();
+const isFeatured = (() => {
+  if (!tags) return false;
+  return tags.includes("featured");
+})();
+
+const category = (() => {
+  if (collection == "writing" && tags) {
+    return tags[0];
+  }
+  return collection;
 })();
 ---
 
@@ -20,8 +31,12 @@ const isArchived = (() => {
     "dark:border-purple rounded",
     { "border-tumbleweed-600/50 hover:border-tumbleweed-600/100": isArchived },
     { "dark:border-purple/70 dark:hover:border-purple/100": isArchived },
+    { "row-span-2": isFeatured },
   ]}
 >
+  <span class:list={["italic text-greenlake-800 dark:text-purple-pale"]}>
+    {category}
+  </span>
   {
     isArchived && (
       <span

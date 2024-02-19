@@ -4,11 +4,12 @@ import Layout from "@layouts/base.astro";
 import TagNav from "@components/TagNav.astro"
 import { getCollection } from "astro:content";
 
-const items = await getCollection("writing");
+const writing = await getCollection("writing");
+const watching = await getCollection("watching");
+const items = [...writing, ...watching];
 ---
 
 <Layout pageTitle="Writing">
-  <h1>Writing about everything</h1>
   <TagNav />
   <Items items={items} />
 </Layout>
