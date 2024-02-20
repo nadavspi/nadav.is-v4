@@ -5,12 +5,23 @@ import { getCollection } from "astro:content";
 const allItems = await getCollection("writing");
 ---
 
-{
-  allTags(allItems).map((tag) => {
-    return (
-      <a href={`/writing/about/${tag}/`} class="block">
-        {tag}
-      </a>
-    );
-  })
-}
+<nav class="flex flex-wrap">
+  {
+    allTags(allItems).map((tag) => {
+      const href = `/writing/about/${tag}`;
+      const isActive = href === Astro.url.pathname.replace(/\/$/, "");
+      return (
+        <a
+          href={href}
+          class:list={[
+            "block mr-2",
+            { "text-tumbleweed-600 dark:text-cyan": isActive },
+            { "hover:text-tumbleweed-900 dark:hover:text-cyan-300": isActive },
+          ]}
+        >
+          {tag}
+        </a>
+      );
+    })
+  }
+</nav>
