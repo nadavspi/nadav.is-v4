@@ -24,8 +24,8 @@ const reading = defineCollection({
 const watching = defineCollection({
   type: 'content', 
   schema: z.object({
-    category: z.enum(["movie", "tv"]),
-    dateAdded: z.date(),
+    category: z.enum(["Movie", "TV"]),
+    date: z.date(),
     link: z.string().optional(),
     title: z.string(),
     titleTranslated: z.string().optional(),
@@ -36,9 +36,11 @@ const watching = defineCollection({
 
 const writing = defineCollection({
   type: 'content', 
-  schema: z.object({
+  schema: ({ image }) => z.object({
     blurb: z.string().optional(),
     date: z.date(),
+    cover: image().optional(),
+    coverAlt: z.string().optional(),
     dateUpdated: z.date().optional(),
     tags: z.array(z.string()).optional(),
     title: z.string(),
