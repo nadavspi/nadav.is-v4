@@ -1,7 +1,7 @@
 ---
 title: Shooting film for a year
 date: 2018-12-01
-tags: [photography]
+tags: [art, myself]
 cover: ./shooting-film-for-a-year/6.jpg
 coverAlt: ""
 ---

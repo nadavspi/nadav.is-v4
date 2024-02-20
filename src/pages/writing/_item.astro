@@ -1,4 +1,5 @@
 ---
+import { excludedTags } from "./allTags.ts";
 const { collection, data, slug } = Astro.props;
 const { cover, coverAlt, date, tags = [], title, titleTranslated } = data;
 import WrittenLongAgo from "@components/WrittenLongAgo.astro";
@@ -11,14 +12,15 @@ const hasTag = (tag) => {
 const isArchived = hasTag("archived");
 const isFeatured = hasTag("featured");
 
-const category = (() => {
-  if (collection == "writing" && tags) {
-    return tags[0];
+const displayTags = (() => {
+  const displayableTags = tags.filter((tag) => !excludedTags.includes(tag));
+  if (collection == "writing" && displayableTags) {
+    return displayableTags;
   }
   if (collection == "watching") {
-    return "media";
+    return ["media"];
   }
-  return collection;
+  return [collection];
 })();
 ---
 
@@ -38,13 +40,17 @@ const category = (() => {
     { "row-span-2": cover },
   ]}
 >
-  <span
-    class:list={[
-      "absolute top-2 left-2 italic text-purple-dark dark:text-purple-light",
-    ]}
-  >
-    {category}
-  </span>
+  {
+    displayTags?.length > 0 && (
+      <span
+        class:list={[
+          "absolute top-2 left-2 italic text-purple-dark dark:text-purple-light",
+        ]}
+      >
+        tags: {displayTags.join(", ")}
+      </span>
+    )
+  }
   {
     isArchived && (
       <span

@@ -6,8 +6,9 @@ const allItems = await getCollection("writing");
 ---
 
 <nav class="flex flex-wrap">
+  <a href="/writing" class:list={["block mr-2"]}> all </a>
   {
-    allTags(allItems).map((tag) => {
+    allTags(allItems).sort().map((tag) => {
       const href = `/writing/about/${tag}`;
       const isActive = href === Astro.url.pathname.replace(/\/$/, "");
       return (
