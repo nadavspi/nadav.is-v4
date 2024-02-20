@@ -30,7 +30,6 @@ const { tag } = Astro.params;
 ---
 
 <Layout pageTitle={`Writing about ${tag}`}>
-  <h1>Writing about <span>{tag}</span></h1>
   <TagNav />
   <Items items={items} />
 </Layout>
