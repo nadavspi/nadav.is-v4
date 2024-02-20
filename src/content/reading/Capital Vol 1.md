@@ -2,7 +2,6 @@
 title: Capital Vol 1
 author: Karl Marx
 category: books
-datePublished: None
 dateUpdated: 2024-02-09 07:19:47+00:00
 ---
 ![](https://readwise-assets.s3.amazonaws.com/static/images/default-book-icon-6.71d9a01814f7.png)
