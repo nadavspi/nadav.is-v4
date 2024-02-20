@@ -1,19 +1,22 @@
 ---
-import WrittenLongAgo from "@components/WrittenLongAgo.astro";
 const { collection, data, slug } = Astro.props;
-const { date, tags = [], title } = data;
-const isArchived = (() => {
+const { cover, coverAlt, date, tags = [], title, titleTranslated } = data;
+import WrittenLongAgo from "@components/WrittenLongAgo.astro";
+import { Image } from "astro:assets";
+
+const hasTag = (tag) => {
   if (!tags) return false;
-  return tags.includes("archived");
-})();
-const isFeatured = (() => {
-  if (!tags) return false;
-  return tags.includes("featured");
-})();
+  return tags.includes(tag);
+};
+const isArchived = hasTag("archived");
+const isFeatured = hasTag("featured");
 
 const category = (() => {
   if (collection == "writing" && tags) {
     return tags[0];
+  }
+  if (collection == "watching") {
+    return "media";
   }
   return collection;
 })();
@@ -26,15 +29,20 @@ const category = (() => {
     "text-sm",
     "transition-all",
     "motion-reduce:transition-none",
-    "p-4 m-4",
+    "p-8 m-4",
     "border-4 border-tumbleweed-600",
     "dark:border-purple rounded",
     { "border-tumbleweed-600/50 hover:border-tumbleweed-600/100": isArchived },
     { "dark:border-purple/70 dark:hover:border-purple/100": isArchived },
     { "row-span-2": isFeatured },
+    { "row-span-2": cover },
   ]}
 >
-  <span class:list={["italic text-greenlake-800 dark:text-purple-pale"]}>
+  <span
+    class:list={[
+      "absolute top-2 left-2 italic text-purple-dark dark:text-purple-light",
+    ]}
+  >
     {category}
   </span>
   {
@@ -49,10 +57,14 @@ const category = (() => {
       </span>
     )
   }
-  <div class="block text-lg/tight my-5">
+  <div class="block text-center text-lg/tight my-5">
     {title}
+    {titleTranslated && <div>{titleTranslated}</div>}
+    <time
+      class="absolute bottom-2 right-2 block text-sm text-purple-dark dark:text-purple-light"
+    >
+      <WrittenLongAgo date={date} />
+    </time>
   </div>
-  <time class="block text-sm text-purple-dark dark:text-purple-light">
-    <WrittenLongAgo date={date} />
-  </time>
+  {cover && <Image src={cover} alt={coverAlt} class="mb-2" />}
 </a>
