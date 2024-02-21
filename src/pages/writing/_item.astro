@@ -32,11 +32,14 @@ const displayTags = (() => {
     "transition-all",
     "motion-reduce:transition-none",
     "p-8 m-4",
-    "border-4 border-tumbleweed-600",
-    "dark:border-purple rounded",
+    "border-4 rounded",
+    "border-tumbleweed-600 dark:border-purple",
+    "hover:border-greenlake dark:hover:border-cyan",
     { "border-tumbleweed-600/50 hover:border-tumbleweed-600/100": isArchived },
-    { "dark:border-purple/70 dark:hover:border-purple/100": isArchived },
+    { "dark:border-purple/70": isArchived },
     { "row-span-2": isFeatured },
+    { "border-tumbleweed-800 dark:border-purple-pale": isFeatured },
+    { "border-tumbleweed-800 dark:border-purple-pale": isFeatured },
     { "row-span-2": cover },
   ]}
 >
