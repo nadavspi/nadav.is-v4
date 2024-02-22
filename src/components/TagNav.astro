@@ -1,15 +1,15 @@
 ---
-import allTags from "../pages/writing/allTags";
+import allTags from "../pages/notes/allTags";
 import { getCollection } from "astro:content";
 
 const allItems = await getCollection("writing");
 ---
 
 <nav class="flex flex-wrap">
-  <a href="/writing" class:list={["block mr-2"]}> all </a>
+  <a href="/notes" class:list={["block mr-2"]}> all </a>
   {
     allTags(allItems).sort().map((tag) => {
-      const href = `/writing/about/${tag}`;
+      const href = `/notes/about/${tag}`;
       const isActive = href === Astro.url.pathname.replace(/\/$/, "");
       return (
         <a
