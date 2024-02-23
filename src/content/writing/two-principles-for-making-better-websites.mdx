@@ -1,12 +1,13 @@
 ---
 title: Two principles for making better websites
 date: 2014-01-02
-tags: [computers]
+tags: [computers, archived]
 ---
+import { Image } from "astro:assets";
+import SmallsBefore from "./two-principles-for-making-better-websites/smalls-before.jpg";
+import SmallsAfter from "./two-principles-for-making-better-websites/smalls-after.jpg";
 
 Given that most musicians don’t have the budget for a professional website but also can’t be expected to spend years learning the craft of web design, I’d like to offer a couple of important principles for making better websites, and a quick example of how they can be applied.
-
-If you’re making your own website or even using a service like Squarespace or WordPress [as I suggested prevously](http://nadav.is/writing/how-to-easily-make-websites-that-dont-suck/), I strongly encourage you to keep these suggestions in mind.
 
 ### How much time you got?
 If you only have five seconds, here's what I want you to take away from this:
@@ -34,11 +35,11 @@ The next things to think about after font size are *line spacing*, and *line len
 
 Here are the relevant parts of *[Typography in ten minutes](http://practicaltypography.com/typography-in-ten-minutes.html)* from the amazing *Practical Typography* book:
 
-> <span class=sc>point size</span> is the size of the let­ters. In print, the most com­fort­able range for body text is **10–12 point**. On the web, the range is **15–25 pixels**. Not every font ap­pears equal­ly large at a giv­en point size, so be pre­pared to ad­just as necessary.
+> point size is the size of the let­ters. In print, the most com­fort­able range for body text is **10–12 point**. On the web, the range is **15–25 pixels**. Not every font ap­pears equal­ly large at a giv­en point size, so be pre­pared to ad­just as necessary.
 >
-> <span class=sc>line spacing</span> is the ver­ti­cal dis­tance be­tween lines. It should be **120–145%** of the point size. In word proces­sors, use the “Exact” line-spac­ing op­tion to achieve this. The de­fault sin­gle-line op­tion is too tight; the 1½-line op­tion is too loose. In CSS, use line-height.
+> line spacing is the ver­ti­cal dis­tance be­tween lines. It should be **120–145%** of the point size. In word proces­sors, use the “Exact” line-spac­ing op­tion to achieve this. The de­fault sin­gle-line op­tion is too tight; the 1½-line op­tion is too loose. In CSS, use line-height.
 >
-> <span class=sc>line length</span> is the hor­i­zon­tal width of the text block. Line length should be an av­er­age of **45–90** characters per line (use your word-count func­tion) or **2–3 low­er­case alphabets**&hellip;
+> line length is the hor­i­zon­tal width of the text block. Line length should be an av­er­age of **45–90** characters per line (use your word-count func­tion) or **2–3 low­er­case alphabets**&hellip;
 
 
 
@@ -49,9 +50,7 @@ Here’s an example from the schedule for [Smalls Jazz Club](http://www.smallsja
 
 
 <figure>
-    <a href="2014-01-02-two-principles-for-making-better-websites/smalls-before.jpg">
-      <img src="2014-01-02-two-principles-for-making-better-websites/smalls-before.jpg" alt="Schedule from the Smalls Jazz Club website">
-    </a>
+    <Image src={SmallsBefore} alt="Schedule from the Smalls Jazz Club website" />
     <figcaption>Schedule for Smalls Jazz Club. <a href="2014-01-02-two-principles-for-making-better-websites/smalls-before.jpg">View full size.</a></figcaption>
 </figure>
 
@@ -66,16 +65,12 @@ Keeping the principles of contrast and typography in mind, I spent less than fiv
 
 <div class="wide">
   <figure class="half">
-    <a href="2014-01-02-two-principles-for-making-better-websites/smalls-before.jpg">
-      <img src="2014-01-02-two-principles-for-making-better-websites/smalls-before.jpg" alt="Schedule from the Smalls Jazz Club website">
-    </a>
-    <figcaption>Before &bullet; <a href="2014-01-02-two-principles-for-making-better-websites/smalls-before.jpg">View full size.</a></figcaption>
+    <Image src={SmallsBefore} alt="Schedule from the Smalls Jazz Club website" />
+    <figcaption>Before</figcaption>
   </figure>
   <figure class="half">
-    <a href="2014-01-02-two-principles-for-making-better-websites/smalls-after.jpg">
-      <img src="2014-01-02-two-principles-for-making-better-websites/smalls-after.jpg" alt="My improvements for the Smalls schedule">
-    </a>
-    <figcaption>After &bullet; <a href="2014-01-02-two-principles-for-making-better-websites/smalls-after.jpg">View full size.</a></figcaption>
+    <Image src={SmallsAfter} alt="My improvements for the Smalls schedule" />
+    <figcaption>After</figcaption>
   </figure>
 </div>
 
