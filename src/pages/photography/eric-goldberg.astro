@@ -12,50 +12,48 @@ import { Image } from "astro:assets";
 ---
 
 <Layout pageTitle="Photography / Eric Goldberg">
-  <div class="grid gap-y-8">
-    <div class="grid xl:grid-cols-5 gap-6">
-      <Image
-        sizes="100vw"
-        src={Portrait}
-        alt="Kind old man wearing glasses with art supplies behind him"
-        class="xl:col-span-3"
-      />
-      <div class="xl:col-span-2">
-        <h1>Eric Goldberg</h1>
-        <h2>Painter &amp; Printmaker</h2>
+  <div class="grid xl:grid-cols-5 gap-6">
+    <Image
+      sizes="100vw"
+      src={Portrait}
+      alt="Kind old man wearing glasses with art supplies behind him"
+      class="xl:col-span-3"
+    />
+    <div class="xl:col-span-2">
+      <h1>Eric Goldberg</h1>
+      <h2>Painter &amp; Printmaker</h2>
 
-        <h2>
-          Philadelphia, PA
-          <br />
-          <time>January 2019</time>
-        </h2>
-      </div>
+      <h2>
+        Philadelphia, PA
+        <br />
+        <time>January 2019</time>
+      </h2>
     </div>
-    <P class="justify-self-center">
-      I photographed{" "}
-      <a href="https://www.ericgoldberg.net/">Eric Goldberg</a> during his{" "}
-      <a
-        href="https://6abc.com/philadelphia-art-of-aging-artist-in-residence-eric-goldberg/5149141/"
-      >
-        residency
-      </a>{" "}
-      at the{" "}
-      <a href="https://www.barnesfoundation.org/">Barnes Foundation</a>. He was
-      72 years old at the time. Eric died in 2021.
-    </P>
-    <P class="justify-self-center">
-      I was in Philly for the{" "}
-      <a href="https://phillypenshow.com/">pen show</a>, and I always walk to
-      the Barnes when I&rsquo;m there. It turned out that Eric was into pens
-      too, and was interested in the show. I wonder if he ended up going.
-    </P>
-    <div class="grid xl:grid-cols-2 gap-6">
-      <Image sizes="100vw" src={WipingCloseup} alt="" />
-      <Image sizes="100vw" src={Wiping} alt="" />
-      <Image sizes="100vw" src={Press} alt="" />
-      <Image sizes="100vw" src={PlateCloseup} alt="" />
-      <Image sizes="100vw" src={PlateAndPrint} alt="" />
-      <Image sizes="100vw" src={Prints} alt="" />
-    </div>
+  </div>
+  <P class="justify-self-center">
+    I photographed{" "}
+    <a href="https://www.ericgoldberg.net/">Eric Goldberg</a> during his{" "}
+    <a
+      href="https://6abc.com/philadelphia-art-of-aging-artist-in-residence-eric-goldberg/5149141/"
+    >
+      residency
+    </a>{" "}
+    at the{" "}
+    <a href="https://www.barnesfoundation.org/">Barnes Foundation</a>. He was 72
+    years old at the time. Eric died in 2021.
+  </P>
+  <P class="justify-self-center">
+    I was in Philly for the{" "}
+    <a href="https://phillypenshow.com/">pen show</a>, and I always walk to the
+    Barnes when I&rsquo;m there. It turned out that Eric was into pens too, and
+    was interested in the show. I wonder if he ended up going.
+  </P>
+  <div class="grid xl:grid-cols-2 gap-6">
+    <Image sizes="100vw" src={WipingCloseup} alt="" />
+    <Image sizes="100vw" src={Wiping} alt="" />
+    <Image sizes="100vw" src={Press} alt="" />
+    <Image sizes="100vw" src={PlateCloseup} alt="" />
+    <Image sizes="100vw" src={PlateAndPrint} alt="" />
+    <Image sizes="100vw" src={Prints} alt="" />
   </div>
 </Layout>

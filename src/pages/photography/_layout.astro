@@ -12,5 +12,7 @@ const links = [
 
 <Layout pageTitle={pageTitle}>
   <Subnav class="mb-10" links={links} />
-  <slot />
+  <div class="grid gap-y-8">
+    <slot />
+  </div>
 </Layout>
