@@ -1,28 +1,20 @@
 ---
+import Subnav from "@components/Subnav.astro";
 import allTags from "../pages/notes/allTags";
 import { getCollection } from "astro:content";
 
 const allItems = await getCollection("writing");
+const links = [
+  { text: "all", href: "/notes" },
+  ...allTags(allItems)
+    .sort()
+    .map((tag) => ({
+      href: `/notes/about/${tag}`,
+      text: tag,
+    })),
+];
 ---
 
 <nav class="flex flex-wrap">
-  <a href="/notes" class:list={["block mr-2"]}> all </a>
-  {
-    allTags(allItems).sort().map((tag) => {
-      const href = `/notes/about/${tag}`;
-      const isActive = href === Astro.url.pathname.replace(/\/$/, "");
-      return (
-        <a
-          href={href}
-          class:list={[
-            "block mr-2",
-            { "text-tumbleweed-600 dark:text-cyan": isActive },
-            { "hover:text-tumbleweed-900 dark:hover:text-cyan-300": isActive },
-          ]}
-        >
-          {tag}
-        </a>
-      );
-    })
-  }
+  <Subnav links={links} />
 </nav>
