@@ -1,0 +1,16 @@
+---
+const { pageTitle } = Astro.props;
+import Layout from "@layouts/base.astro";
+import Subnav from "@components/Subnav.astro";
+
+const links = [
+  { text: "Wyoming", href: "/photography/wyoming" },
+  { text: "Andy Miller", href: "/photography/andy-miller" },
+  { text: "Eric Goldberg", href: "/photography/eric-goldberg" },
+];
+---
+
+<Layout pageTitle={pageTitle}>
+  <Subnav class="mb-10" links={links} />
+  <slot />
+</Layout>
