@@ -8,7 +8,7 @@
   }
 
   h2 {
-    @apply text-xl text-greenlake-800 dark:text-purple-pale;
+    @apply text-lg text-greenlake-800 dark:text-purple-pale;
     @apply mb-2;
     /* font-variant-caps: small-caps; */
   }
