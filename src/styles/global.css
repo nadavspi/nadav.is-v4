@@ -1,5 +1,4 @@
 @tailwind base;
-
 @layer base {
   h1 {
     @apply text-xl md:text-2xl font-bold;
@@ -27,4 +26,14 @@
 
 @tailwind components;
 
-@tailwind utilities;
+@tailwind utilities; 
+@layer utilities {
+  .fullbleed {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
