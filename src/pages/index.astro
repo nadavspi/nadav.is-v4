@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/base.astro";
-import Nadav from "../content/photos/nadav.jpg";
+import Nadav from "../content/photos/nadav-square.jpg";
 import ThemeSwitcher from "@components/ThemeSwitcher.astro";
 import { Image } from "astro:assets";
 import navLinks from "@components/navLinks.js";
@@ -10,20 +10,57 @@ import navLinks from "@components/navLinks.js";
   <header class="md:relative mb-4 md:mb-12 pb-4">
     <ThemeSwitcher class="md:absolute top-0 right-0" />
   </header>
-  <main class="md:text-xl">
-    <h1 class="underline decoration-2 decoration-tumbleweed dark:decoration-purple">Hello. I’m Nadav Spiegelman</h1>
-    <Image src={Nadav} alt="here I am" class="max-w-60 mb-4" />
-    
+  <main
+    class:list={[
+      "md:text-xl",
+      "xl:relative",
+      "xl:grid xl:grid-cols-3",
+      "xl:border-tumbleweed xl:dark:border-purple",
+      "xl:pb-12 xl:border-b-4",
+    ]}
+  >
+    <article
+      class:list={[
+        "xl:justify-self-end xl:mr-12 xl:col-span-2",
+        "xl:border-r-4 xl:pr-12 xl:py-6",
+        "border-tumbleweed dark:border-purple",
+      ]}
+    >
+      <div
+        class:list={[
+          "hidden xl:block",
+          "absolute top-[50%] translate-y-[-50%] left-0",
+          "-rotate-90 text-6xl"
+        ]}
+      >
+        Hello
+      </div>
+      <h1
+        class="underline decoration-2 decoration-tumbleweed dark:decoration-purple xl:text-3xl"
+      >
+        <span class="xl:hidden">Hello.</span>
+        I’m Nadav Spiegelman.
+      </h1>
+      <Image src={Nadav} alt="here I am" class="max-w-60 xl:max-w-96 mb-6" />
+
       <div>I’m an artist living in New York City.</div>
       <div>I’m queer, Israeli & American & neither.</div>
       <div>I’m <a href="/notes/about">a person of many interests.</a></div>
-    
+    </article>
 
-    <nav class="mt-12">
+    <nav
+      class:list={[
+        "mt-6 pt-6 max-w-80",
+        "border-t-4",
+        "border-tumbleweed dark:border-purple",
+        "xl:border-t-0",
+        "xl:text-3xl",
+      ]}
+    >
       {
         navLinks.map((link) => {
           return (
-            <a class="block mb-2" href={link.href}>
+            <a class="block mb-2 lg:mb-3 xl:mb-6" href={link.href}>
               {link.text}
             </a>
           );
