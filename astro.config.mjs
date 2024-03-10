@@ -8,5 +8,11 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [mdx(), tailwind({
     applyBaseStyles: false
-  }), react()]
+  }), react()],
+  redirects: {
+    '/photography': { 
+      destination: '/photography/wyoming',
+      status: 302,
+    }
+  },
 });
