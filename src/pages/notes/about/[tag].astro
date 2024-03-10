@@ -1,21 +1,23 @@
 ---
 import Items from "../_items.astro";
 import Layout from "@layouts/base.astro";
-import TagNav from "@components/TagNav.astro"
+import TagNav from "@components/TagNav.astro";
 import allTags from "../allTags.ts";
 import { getCollection } from "astro:content";
 
-const allItems = await getCollection("writing");
-
 export async function getStaticPaths() {
-const allItems = await getCollection("writing");
+  const allItems = await getCollection("writing");
   const itemsByTag = async (tag) => {
+    if (tag == "media") {
+      return await getCollection("watching");
+    }
+
     return await getCollection("writing", ({ data }) => {
       return data.tags?.includes(tag);
     });
   };
   const paths = await Promise.all(
-    allTags(allItems).map(async (tag) => {
+    [...allTags(allItems), "media"].map(async (tag) => {
       return {
         params: { tag },
         props: { items: await itemsByTag(tag) },
