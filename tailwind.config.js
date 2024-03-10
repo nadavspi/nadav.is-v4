@@ -7,7 +7,7 @@ export default {
 			screens: {
 				'3xl': '1600px',
 			},
-			typography: {
+			typography: ({ theme }) => ({
 				DEFAULT: {
 					css: {
 						lineHeight: '1.5'
