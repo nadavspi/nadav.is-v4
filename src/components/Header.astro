@@ -4,8 +4,10 @@ import ThemeSwitcher from "./ThemeSwitcher.astro";
 ---
 
 <header
-  class="md:flex md:items-center mb-10 border-b-4 border-tumbleweed dark:border-purple pb-2 font-serif"
+  class="md:flex md:flex-row-reverse md:items-center mb-10 border-b-4 border-tumbleweed dark:border-purple pb-2 font-serif"
 >
+  <ThemeSwitcher />
+
   <div class="flex-1">
     {
       backTo ? (
@@ -23,5 +25,4 @@ import ThemeSwitcher from "./ThemeSwitcher.astro";
     }
   </div>
 
-  <ThemeSwitcher />
 </header>
