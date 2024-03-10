@@ -14,13 +14,8 @@ const isActive = (href) => {
 
   return false;
 };
-const links = [
-  { href: "/notes", text: "Notes" },
-  { href: "/photography", text: "Photography" },
-  { href: "/reading", text: "Reading" },
-  { href: "/watching", text: "Watching" },
-  { href: "mailto:fresh.rain2888@nadav.name", text: "Contact" },
-].map((link) => ({
+import navLinks from "@components/navLinks.js"
+const links = navLinks.map((link) => ({
   ...link,
   isActive: isActive(link.href),
 }));
