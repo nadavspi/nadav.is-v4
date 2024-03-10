@@ -1,57 +1,27 @@
 ---
+const { backTo } = Astro.props;
 import ThemeSwitcher from "./ThemeSwitcher.astro";
-const isActive = (href) => {
-  const current = Astro.url.pathname;
-  if (href === current) {
-    return true;
-  }
-
-  const segments = (pathname) => pathname.split("/").filter(Boolean);
-  // /writing counts as active when we're on /writing/about/whatever
-  if (segments(current)[0] === segments(href)[0]) {
-    return true;
-  }
-
-  return false;
-};
-import navLinks from "@components/navLinks.js"
-const links = navLinks.map((link) => ({
-  ...link,
-  isActive: isActive(link.href),
-}));
 ---
 
 <header
-  class="md:relative mb-10 border-b-4 border-tumbleweed-600 dark:border-purple pb-4 font-serif"
+  class="md:flex md:items-center mb-10 border-b-4 border-tumbleweed dark:border-purple pb-2 font-serif"
 >
-  <a
-    href="/"
-    class="flex-100 text-2xl text-purple-dark dark:text-purple-light italic"
-  >
-    Nadav Spiegelman
-  </a>
-
-  <ThemeSwitcher class="md:absolute top-0 right-0" />
-
-  <nav class="mt-1">
+  <div class="flex-1">
     {
-      links.map((link) => {
-        return (
-          <a
-            class:list={[
-              "mr-3",
-              { "text-tumbleweed-600 dark:text-cyan": link.isActive },
-              {
-                "hover:text-tumbleweed-900 dark:hover:text-cyan-300":
-                  link.isActive,
-              },
-            ]}
-            href={link.href}
-          >
-            {link.text}
-          </a>
-        );
-      })
+      backTo ? (
+        <a
+          href={`/${backTo}`}
+          class="text-purple-dark dark:text-purple-light italic"
+        >
+          ← Back to {backTo}
+        </a>
+      ) : (
+        <a href="/" class="text-purple-dark dark:text-purple-light">
+          ← Back home
+        </a>
+      )
     }
-  </nav>
+  </div>
+
+  <ThemeSwitcher />
 </header>
