@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 const allItems = await getCollection("writing");
 const links = [
   { text: "all", href: "/notes" },
-  ...[...allTags(allItems), "media", "reading"]
+  ...[...allTags(allItems), "media"]
     .sort()
     .map((tag) => ({
       href: `/notes/about/${tag}`,
