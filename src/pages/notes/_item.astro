@@ -30,6 +30,9 @@ const href = (() => {
   if (collection == "watching") {
     return `/notes/media/${slug}`;
   }
+  if (collection == "reading") {
+    return `/notes/reading/${slug}`;
+  }
 
   throw new Error(`Missing href logic for collection \`${collection}\``);
 })();

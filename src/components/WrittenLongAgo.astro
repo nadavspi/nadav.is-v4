@@ -10,7 +10,7 @@ const { class: className, date } = Astro.props;
 const longAgo = formatDistanceToNow(date, { addSuffix: true });
 const capitalized = [...longAgo][0].toUpperCase() + longAgo.slice(1);
 ---
-
+ 
 <span class:list={[className]}>
-  Written {capitalized}
+  {capitalized}
 </span>

@@ -11,13 +11,16 @@ export async function getStaticPaths() {
     if (tag == "media") {
       return await getCollection("watching");
     }
+    if (tag == "reading") {
+      return await getCollection("reading");
+    }
 
     return await getCollection("writing", ({ data }) => {
       return data.tags?.includes(tag);
     });
   };
   const paths = await Promise.all(
-    [...allTags(allItems), "media"].map(async (tag) => {
+    [...allTags(allItems), "media", "reading"].map(async (tag) => {
       return {
         params: { tag },
         props: { items: await itemsByTag(tag) },

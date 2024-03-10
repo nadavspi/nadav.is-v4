@@ -13,10 +13,12 @@ const reading = defineCollection({
   schema: z.object({
     author: z.string(),
     category: z.enum(["articles", "books"]),
-    datePublished: z.date().optional(),
-    dateUpdated: z.date().optional(),
+    // readwise will return "None" for undefined date
+    datePublished: z.date().or(z.string()).optional(),
+    date: z.date().optional(),
     link: z.string().url().optional(),
-    title: z.string(),
+    // coerce because we may have numerical titles
+    title: z.coerce.string(),
     titleTranslated: z.string().optional(),
   }),
 });
