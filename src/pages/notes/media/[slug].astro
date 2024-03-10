@@ -1,0 +1,34 @@
+---
+import WrittenLongAgo from "@components/WrittenLongAgo.astro";
+import Layout from "@layouts/base.astro";
+import Prose from "@components/Prose.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const items = await getCollection("watching");
+  return items.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await item.render();
+const { category, date, title, titleTranslated, yearPublished } = item.data;
+---
+
+<Layout backTo="notes" pageTitle={title}>
+  <header class="mb-8">
+    <h1 class="mb-0">
+      <span class="block">{title}</span>
+      {titleTranslated}
+    </h1>
+    <div class="flex gap-2">
+      <WrittenLongAgo date={date} />
+      ⋅
+      <div>{yearPublished}, {category}</div>
+    </div>
+  </header>
+
+  <Content />
+</Layout>

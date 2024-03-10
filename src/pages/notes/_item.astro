@@ -22,10 +22,21 @@ const displayTags = (() => {
   }
   return [collection];
 })();
+
+const href = (() => {
+  if (collection == "writing") {
+    return `/notes/${slug}`;
+  }
+  if (collection == "watching") {
+    return `/notes/media/${slug}`;
+  }
+
+  throw new Error(`Missing href logic for collection \`${collection}\``);
+})();
 ---
 
 <a
-  href={`/notes/${slug}`}
+  href={href}
   class:list={[
     "relative group",
     "text-sm",

@@ -1,6 +1,5 @@
 export default [
-  { href: "/notes", text: "Notes" },
   { href: "/photography", text: "Photography" },
+  { href: "/notes", text: "Notes" },
   { href: "/reading", text: "Reading" },
-  { href: "/watching", text: "Watching" },
 ]
