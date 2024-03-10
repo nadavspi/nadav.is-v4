@@ -15,7 +15,7 @@ const { item } = Astro.props;
 const { Content } = await item.render();
 ---
 
-<Layout pageTitle={item.data.title}>
+<Layout backTo="reading" pageTitle={item.data.title}>
   <Prose>
     <h1>{item.data.title}</h1>
     <Content />
