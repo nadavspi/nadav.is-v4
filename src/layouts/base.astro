@@ -13,7 +13,7 @@ const { pageTitle, backTo, noHeader } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class="bg-tumbleweed-50 dark:bg-purple-dark text-purple-dark dark:text-purple-light max-w-[60rem] mx-auto">
+  <body class="bg-tumbleweed-100 dark:bg-purple-dark text-purple-dark dark:text-purple-light max-w-[60rem] mx-auto">
     {!noHeader && <Header backTo={backTo} />}
     <slot />
   </body>
