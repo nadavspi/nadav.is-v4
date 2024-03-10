@@ -1,6 +1,5 @@
 ---
 import Layout from "./_layout.astro";
-import P from "@components/P.astro";
 import { Image } from "astro:assets";
 
 import Spaceship from "./wyoming/wyoming-100.jpg";
@@ -15,12 +14,9 @@ import StainedGlass from "./wyoming/wyoming-108.jpg";
 import SynagogueExterior from "./wyoming/wyoming-109.jpg";
 import SynagogueStorage from "./wyoming/wyoming-100-2.jpg";
 import SynagogueShelf from "./wyoming/wyoming-110.jpg";
-import VoterGuide from "./wyoming/wyoming-111.jpg";
 import Simon from "./wyoming/wyoming-112.jpg";
 import PrayerFence from "./wyoming/wyoming-113.jpg";
 import Me from "./wyoming/wyoming-114.jpg";
-
-const images = [];
 ---
 
 <Layout pageTitle="Photography / Wyoming">
@@ -39,18 +35,18 @@ const images = [];
     <Image
       src={Jason}
       alt=""
-      class="xl:col-span-2 xl:my-12 max-w-[50rem] justify-self-center"
+      class="xl:col-span-2 xl:my-12 xl:max-w-[50rem] justify-self-center"
     />
-    <div class="col-span-2 grid xl:grid-cols-7 gap-6 xl:mb-12 xl:items-end">
+    <div class="xl:col-span-2 grid xl:grid-cols-7 gap-6 xl:mb-12 xl:items-end">
       <Image src={Trees} alt="" class="xl:col-span-3 xl:mt-24" />
       <Image src={Dan} alt="" class="xl:col-span-4" />
       <Image src={Lasso} alt="" class="xl:col-span-3 xl:col-start-3" />
     </div>
-    <div class="col-span-2 grid xl:grid-cols-12 gap-6 xl:mb-12 xl:items-end">
+    <div class="xl:col-span-2 grid xl:grid-cols-12 gap-6 xl:mb-12 xl:items-end">
       <Image src={StandingRock} alt="" class="xl:col-span-5" />
       <Image src={Rodger} alt="" class="xl:col-span-7" />
     </div>
-    <div class="col-span-2 grid xl:grid-cols-3 gap-6 xl:mb-12 xl:items-center">
+    <div class="xl:col-span-2 grid xl:grid-cols-3 gap-6 xl:mb-12 xl:items-center">
       <Image src={StainedGlass} alt="" />
       <div class="xl:col-span-2 xl:row-span-2">
         <h2>Simon</h2>
