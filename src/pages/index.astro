@@ -1,29 +1,34 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "@layouts/base.astro";
-import Welcome from "./welcome.gif";
-import sharp from "sharp";
-import WelcomeStatic from "./welcome-static.gif";
+import Nadav from "../content/photos/nadav.jpg";
+import ThemeSwitcher from "@components/ThemeSwitcher.astro";
+import { Image } from "astro:assets";
+import navLinks from "@components/navLinks.js";
 ---
 
-<Layout pageTitle="Nadav Spiegelman">
-  <!-- <Image src={Welcome} alt="Welcome to my Homepage!" /> -->
-  <Image src={WelcomeStatic} alt="Welcome to my Homepage!" />
-  <button data-toggle-animation class="">Disable animation</button>
-  <div class="font-serif md:text-2xl my-3">
-    (Because I’ve been making websites since 1999.)
-  </div>
-  <p>
-    Anyway. This is my personal website, an online journal — a web log, if you
-    will — for sharing some of the things I’m thinking about or working on.
-  </p>
+<Layout noHeader={true} pageTitle="Nadav Spiegelman">
+  <header class="md:relative mb-10 pb-4">
+    <ThemeSwitcher class="md:absolute top-0 right-0" />
+  </header>
+  <main class="mt-12 ml-6 md:text-xl">
+    <h1 class="underline decoration-2 decoration-tumbleweed dark:decoration-purple">Hello. I’m Nadav Spiegelman</h1>
+    <Image src={Nadav} alt="here I am" class="max-w-80 mb-4" />
+    
+      <div>I’m an artist living in New York City.</div>
+      <div>I’m queer, Israeli & American & neither.</div>
+      <div>I’m <a href="/notes/about">a person of many interests.</a></div>
+    
 
-  <h2>Newcomer?</h2>
-  <h2></h2>
+    <nav class="mt-12">
+      {
+        navLinks.map((link) => {
+          return (
+            <a class="block mb-2" href={link.href}>
+              {link.text}
+            </a>
+          );
+        })
+      }
+    </nav>
+  </main>
 </Layout>
-
-<script>
-  const button = document.querySelector("[data-toggle-animation]");
-  button?.addEventListener("click", () => {
-  });
-</script>
