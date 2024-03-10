@@ -12,8 +12,22 @@ export default {
 					css: {
 						lineHeight: '1.5'
 					}
-				}
-			}
+				},
+				nadav: {
+					css: {
+					'--tw-prose-body': theme('colors.purple.dark'),
+					'--tw-prose-bullets': theme('colors.purple.dark'),
+					'--tw-prose-quotes': theme('colors.greenlake[800]'),
+					'--tw-prose-quote-borders': theme('colors.greenlake[600]'),
+					'--tw-prose-captions': theme('colors.greenlake[800]'),
+					'--tw-prose-invert-body': theme('colors.purple.light'),
+					'--tw-prose-invert-bullets': theme('colors.purple.light'),
+					'--tw-prose-invert-quotes': theme('colors.tumbleweed[50]'),
+					'--tw-prose-invert-quote-borders': theme('colors.tumbleweed[400]'),
+					'--tw-prose-invert-captions': theme('colors.tumbleweed[50]'),
+					},
+				},
+			})
 		},
 		fontFamily: {
 			serif: ['FF Tundra', 'Georgia' ,' serif'],
