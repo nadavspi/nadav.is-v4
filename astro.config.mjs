@@ -9,10 +9,4 @@ export default defineConfig({
   integrations: [mdx(), tailwind({
     applyBaseStyles: false
   }), react()],
-  redirects: {
-    '/photography': { 
-      destination: '/photography/wyoming',
-      status: 302,
-    }
-  },
 });
