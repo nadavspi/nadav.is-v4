@@ -19,13 +19,13 @@ You may notice all of these are old, from the 50's and 60's. Consider that a for
 9. Wes Montgomery & Wynton Kelly Trio - *[Smokin' at the Half Note][7101-009]*
 10. Duke Ellington - *[&hellip;And His Mother Called Him Bill][7101-010]*
 
-[7101-001]: http://www.amazon.com/gp/product/B0000046QI/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0000046QI&linkCode=as2&tag=nadavis-20
-[7101-002]: http://www.amazon.com/gp/product/B0000A118M/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0000A118M&linkCode=as2&tag=nadavis-20
-[7101-003]: http://www.amazon.com/gp/product/B0012S5A0E/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0012S5A0E&linkCode=as2&tag=nadavis-20
-[7101-004]: http://www.amazon.com/gp/product/B0000047G8/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0000047G8&linkCode=as2&tag=nadavis-20
-[7101-005]: http://www.amazon.com/gp/product/B00000I8UH/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00000I8UH&linkCode=as2&tag=nadavis-20
-[7101-006]: http://www.amazon.com/gp/product/B000006EJ4/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000006EJ4&linkCode=as2&tag=nadavis-20
-[7101-007]: http://www.amazon.com/gp/product/B000000Y2A/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000000Y2A&linkCode=as2&tag=nadavis-20
-[7101-008]: http://www.amazon.com/gp/product/B00000I14Z/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00000I14Z&linkCode=as2&tag=nadavis-20
-[7101-009]: http://www.amazon.com/gp/product/B00000470Y/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00000470Y&linkCode=as2&tag=nadavis-20
-[7101-010]: http://www.amazon.com/gp/product/B008NEZOCO/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008NEZOCO&linkCode=as2&tag=nadavis-20
+[7101-001]: http://www.amazon.com/gp/product/B0000046QI/
+[7101-002]: http://www.amazon.com/gp/product/B0000A118M/
+[7101-003]: http://www.amazon.com/gp/product/B0012S5A0E/
+[7101-004]: http://www.amazon.com/gp/product/B0000047G8/
+[7101-005]: http://www.amazon.com/gp/product/B00000I8UH/
+[7101-006]: http://www.amazon.com/gp/product/B000006EJ4/
+[7101-007]: http://www.amazon.com/gp/product/B000000Y2A/
+[7101-008]: http://www.amazon.com/gp/product/B00000I14Z/
+[7101-009]: http://www.amazon.com/gp/product/B00000470Y/
+[7101-010]: http://www.amazon.com/gp/product/B008NEZOCO/

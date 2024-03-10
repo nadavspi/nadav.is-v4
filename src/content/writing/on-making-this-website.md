@@ -4,7 +4,7 @@ date: 2013-12-24
 tags: [computers, archived]
 ---
 
-<aside class="notice">This post is outdated: it refers to the previous version of this website.</aside>
+<aside class="notice">This post is outdated: it refers to a previous version of this website.</aside>
 
 This is my website. There are many like it, but [this one is mine][1846-001]. The source code is [available on GitHub](https://github.com/nadavspi/nadav.is).
 
@@ -18,20 +18,15 @@ I used a [modular scale][1846-006] for the site, using the ratio of a major thir
 
 ## Code
 
-This website uses [Middleman](!g “Middleman app”), my static site generator of choice. [Jekyll][1846-007] seems to be getting more attention these days, but I feel most at home with Ruby and ERB templating, so I’m sticking with Middleman for now. It’s written in HTML5 and [Sass][1846-008], generally adhering to [SMACSS][1846-009] and [BEM][1846-010] principles as far as splitting things up into partials and naming classes descriptively.
+This website uses [Middleman](https://middlemanapp.com/), my static site generator of choice. [Jekyll][1846-007] seems to be getting more attention these days, but I feel most at home with Ruby and ERB templating, so I’m sticking with Middleman for now. It’s written in HTML5 and [Sass][1846-008], generally adhering to [SMACSS][1846-009] and [BEM][1846-010] principles as far as splitting things up into partials and naming classes descriptively.
 
 I feel like the [OOCSS][1846-011]/BEM thing can lead to an unnecessarily cluttered DOM with all of the class names, although I love the idea of abstracting reusable patterns. Preferring clean HTML, I tend to use [extend](!g “sass extend”) instead of applying a class to every element. For now, anyway.
 
 
 ## Layout
-This site was built *[mobile first][1846-012]* using [Susy](!g “Susy grid”) as the grid framework. I’m using the nifty *[magic grid](http://susy.oddbird.net/demos/magic/)* thing that applies a breakpoint as soon as the specified number of columns can fit in the viewport.
+This site was built *[mobile first][1846-012]* using [Susy](https://www.oddbird.net/susy/) as the grid framework. I’m using the nifty *[magic grid](http://susy.oddbird.net/demos/magic/)* thing that applies a breakpoint as soon as the specified number of columns can fit in the viewport.
 
 I sketched some mockups at 7am one morning during [Patterns](http://patterns.co) then put them away to work on the content. I played with some more complicated ideas for the home page before ending up with the simple layout it has now.
-
-<figure>
-    <img src=/images/articles/mockup.jpg alt="First mockup of nadav.is">
-    <figcaption>The first mockup of this website.</figcaption>
-</figure>
 
 ## Writing
 

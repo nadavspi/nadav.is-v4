@@ -22,4 +22,4 @@ I'm wary of stepping into the territory of criticism when I talk about Jazz. In 
 
 [3716-001]: http://joshlong.me/
 [3716-002]: http://patterns.co/
-[3716-003]: http://www.amazon.com/gp/product/0060891548/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0060891548&linkCode=as2&tag=nadavis-20
+[3716-003]: http://www.amazon.com/gp/product/0060891548

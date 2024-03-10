@@ -4,6 +4,10 @@ date: 2013-12-23
 tags: [music]
 ---
 
+import { Image } from "astro:assets";
+import Miles from "./miles-davis/Miles.jpg";
+import Miles1991 from "./miles-davis/Miles1991.jpg";
+
 “I can’t talk about Miles Davis—he’s Miles Davis!” The assignment was to talk about people we admire and explain what makes them great. I didn’t think everyone in the group at [Patterns](http://patterns.co)—designers, entrepreneurs, and film people—wanted to hear me prattle about Jazz for a week, so I tried to think of some heroes that weren’t musicians.
 
 I couldn’t. I was going to talk about Miles Davis. I was conflicted about presenting him as a *hero*. I worried about mythologizing a gruff drug addict into a saintly genius. Still, one has to separate the person from the work.
@@ -11,7 +15,7 @@ I couldn’t. I was going to talk about Miles Davis. I was conflicted about pres
 After sharing my thought process with the group, I pulled up a [Google Image Search for Miles][google-image] on the TV, looked at it for a few seconds, and said: “Just look at this motherfucker. Miles Davis epitomizes cool.”[^planned]
 
 <figure>
-    <img src=/images/articles/Miles.jpg alt=“Miles Davis”>
+    <Image src={Miles} alt="Miles Davis" />
     <figcaption>
         "Just look at this motherfucker." Photo by Paul Talumbo.
     </figcaption>
@@ -63,7 +67,8 @@ The first Miles album to include electric instrument is also the last album to f
 Miles' career didn't end in 1970. He took a six year hiatus starting in 1975, but otherwise continued to play until his death in 1991.
 
 <figure>
-    <img src=/images/articles/Miles1991.jpg alt=“Miles Davis in 1991”>
+    
+    <Image src={Miles1991} alt="Miles Davis in 1991" />
     <figcaption>
         Miles Davis in 1991. Photo by Peter Buitelaar.
     </figcaption>
@@ -83,22 +88,22 @@ Miles' career didn't end in 1970. He took a six year hiatus starting in 1975, bu
 [google-image]: https://www.google.com/search?site=&tbm=isch&source=hp&biw=1440&bih=802&q=miles+davis&oq=miles+davison
 [duke]: http://en.wikipedia.org/wiki/Duke_Ellington
 [7140-001]: http://en.wikipedia.org/wiki/Cool_jazz
-[7140-002]: http://www.amazon.com/gp/product/B000000YAL/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000000YAL&linkCode=as2&tag=nadavis-20
-[kindofblue]: http://www.amazon.com/gp/product/B000002ADT/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000002ADT&linkCode=as2&tag=nadavis-20
+[7140-002]: http://www.amazon.com/gp/product/B000000YAL
+[kindofblue]: http://www.amazon.com/gp/product/B000002ADT
 [7140-004]: http://en.wikipedia.org/wiki/Miles_Davis_discography
-[0775-001]: http://www.amazon.com/gp/product/B000000YAL/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000000YAL&linkCode=as2&tag=nadavis-20
-[0775-002]: http://www.amazon.com/gp/product/B000000YLS/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000000YLS&linkCode=as2&tag=nadavis-20
-[0775-003]: http://www.amazon.com/gp/product/B000000Y7F/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000000Y7F&linkCode=as2&tag=nadavis-20
-[0775-004]: http://www.amazon.com/gp/product/B000000YGI/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000000YGI&linkCode=as2&tag=nadavis-20
-[6298-001]: http://www.amazon.com/gp/product/B000002ADT/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000002ADT&linkCode=as2&tag=nadavis-20
+[0775-001]: http://www.amazon.com/gp/product/B000000YAL
+[0775-002]: http://www.amazon.com/gp/product/B000000YLS
+[0775-003]: http://www.amazon.com/gp/product/B000000Y7F
+[0775-004]: http://www.amazon.com/gp/product/B000000YGI
+[6298-001]: http://www.amazon.com/gp/product/B000002ADT
 [1475-001]: http://en.wikipedia.org/wiki/John_Coltrane
 [1475-002]: http://en.wikipedia.org/wiki/Red_Garland
 [1475-003]: http://en.wikipedia.org/wiki/Paul_Chambers
 [1475-004]: http://en.wikipedia.org/wiki/Philly_Joe_Jones
-[1431-001]: http://www.amazon.com/gp/product/B0012GMWEI/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B0012GMWEI&linkCode=as2&tag=nadavis-20
+[1431-001]: http://www.amazon.com/gp/product/B0012GMWEI
 [1431-002]: http://en.wikipedia.org/wiki/Jazz_fusion
-[1431-003]: http://www.amazon.com/gp/product/B00006GO9Q/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00006GO9Q&linkCode=as2&tag=nadavis-20
-[1431-004]: http://www.amazon.com/gp/product/B00000J7SS/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00000J7SS&linkCode=as2&tag=nadavis-20
+[1431-003]: http://www.amazon.com/gp/product/B00006GO9Q
+[1431-004]: http://www.amazon.com/gp/product/B00000J7SS
 [8999-001]: http://en.wikipedia.org/wiki/John_Coltrane
 [8999-002]: http://en.wikipedia.org/wiki/Cannonball_Adderley
 [8999-003]: http://en.wikipedia.org/wiki/Bill_Evans
